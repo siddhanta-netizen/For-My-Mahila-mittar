@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Title1</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ffd1dc, #ff9de2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  animation: bgAnimation 10s ease-in-out infinite alternate;
+}
+
+@keyframes bgAnimation {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  max-width: 500px;
+  text-align: center;
+  line-height: 1.6;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 1.5s ease;
+}
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+.emoji {
+  font-size: 1.6rem;
+  display: inline-block;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+  40% {transform: translateY(-10px);}
+  60% {transform: translateY(-5px);}
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #ff9de2;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+button:hover {
+  background: #f56bb1;
+  transform: scale(1.05);
+}
+
+img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+img:hover {
+  transform: scale(1.1);
+}
+</style>
+</head>
+<body>
+<div class="card">
+<h2>FOR MY MAHILA MITTAR(SUHUNA)❤️🤗</h2>
+<img src="1.jpg" alt="Friend 1" />
+<img src="4.jpg" alt="Friend 2" />
+<img src="3.jpg" alt="Friend 2" />
+<p id="caption">
+You don’t even realize how much your presence means to me. You’ve been there in ways I never had to ask for — listening, understanding, and making me feel seen on days I needed it most <span class="emoji">💛🤗</span>.
+You bring comfort, joy, and a kind of peace that not many people can give <span class="emoji">🌿</span>. I’m truly grateful for you… for every laugh, every talk, and every moment that reminds me I’m not alone in this world 
+<h2>Thank You For Being My BestFriend❤️🤗</h2><span class="emoji">🤝✨</span>.
+</p>
+<button onclick="changeCaption()">Show New Caption</button>
+</div>
+
+<script>
+const captions = [
+  'You always make my days brighter 💛🌸.',
+  'Life is better with you around 🤝✨.',
+  'Thanks for always being my rock and my laughter 🌿💛.',
+  'You’re not just a friend, you’re family 💕🌟.',
+  'Every moment with you is a memory I treasure 💖🌸.',
+  'You light up my world in ways words can’t explain 🌟💛.'
+];
+
+function changeCaption() {
+  const captionEl = document.getElementById('caption');
+  const randomIndex = Math.floor(Math.random() * captions.length);
+  captionEl.innerHTML = captions[randomIndex];
+}
+</script>
+</body>
+</html>
